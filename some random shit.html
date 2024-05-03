@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Idle Easy Version</title>
+</head>
+
+<body>
+    <center>
+        <h1>Genshin Idle Easy Version</h1>
+    </center>
+
+    <!-- First Form -->
+    <form id="form1">
+        <div class="form-control">
+            <label for="characterName">Enter a Character Name:</label>
+            <input type="text" id="characterName" />
+        </div>
+        <button type="button" onclick="showName()" style="margin-left: 150px;">Submit</button>
+    </form>
+
+    <!-- First Table -->
+    <table style="width:80%; border: 1px solid #ddd;">
+        <tr>
+            <td id="displayArea1">Character name will appear here</td>
+            <td id="clueArea1">Clue:</td>
+        </tr>
+    </table>
+
+    <!-- Second Form -->
+    <form id="form2">
+        <div class="form-control">
+            <label for="characterName1">Enter a Character Name:</label>
+            <input type="text" id="characterName1" />
+        </div>
+        <button type="button" onclick="showName1()" style="margin-left: 150px;">Submit</button>
+    </form>
+
+    <!-- Second Table -->
+    <table style="width:80%; border: 1px solid #ddd;">
+        <tr>
+            <td id="displayArea2">Character name will appear here</td>
+            <td id="clueArea2">Clue:</td>
+        </tr>
+    </table>
+
+<p></p>
+
+    <!-- Third Form -->
+    <form id="form3">
+        <div class="form-control">
+            <label for="characterName3">Enter a Character Name:</label>
+            <input type="text" id="characterName3" />
+        </div>
+        <button type="button" onclick="showName3()" style="margin-left: 150px;">Submit</button>
+    </form>
+
+    <!-- Third Table -->
+    <table style="width:80%; border: 1px solid #ddd;">
+        <tr>
+            <td id="displayArea3">Character name will appear here</td>
+            <td id="clueArea3">Clue:</td>
+        </tr>
+    </table>
+
+<p></p>
+   
+    <!-- Forth Form -->
+    <form id="form4">
+        <div class="form-control">
+            <label for="characterName4">Enter a Character Name:</label>
+            <input type="text" id="characterName4" />
+        </div>
+        <button type="button" onclick="showName4()" style="margin-left: 150px;">Submit</button>
+    </form>
+
+    <!-- Forth Table -->
+    <table style="width:80%; border: 1px solid #ddd;">
+        <tr>
+            <td id="displayArea4">Character name will appear here</td>
+            <td id="clueArea4">Clue:</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+<script>
+    function showName() {
+        var name = document.getElementById('characterName').value.trim();
+        document.getElementById('displayArea1').textContent = name;
+        var mondstadtCharacters = ["Albedo", "Amber", "Barbara", "Bennett", "Diluc", "Diona", "Eula", "Fischl", "Jean", "Kaeya", "Klee", "Lisa", "Mika", "Mona", "Noelle", "Razor", "Rosaria", "Sucrose", "Venti"];
+        var greeting = "Not the right Region, keep guessing!";
+
+        if (mondstadtCharacters.includes(name)) {
+            greeting = "Mondstadt";
+        }
+
+        document.getElementById('clueArea1').textContent = "Clue: " + greeting;
+    }
+
+    function showName1() {
+        var name1 = document.getElementById('characterName1').value.trim();
+        document.getElementById('displayArea2').textContent = name1;
+        var bowuser = ["Sethos", "Aloy", "Ganyu", "Lyney", "Tartaglia", "Tighnari", "Venti", "Yelan", "Yoimiya", "Amber", "Collei", "Diona", "Faruzan", "Fischl", "Gorou", "Kujo Sara"];
+        var greeting = "Not the Right Weapon, keep Guessing!";
+
+        if (bowuser.includes(name1)) {
+            greeting = "BowUser";
+        }
+
+        document.getElementById('clueArea2').textContent = "Clue: " + greeting;
+    }
+
+    function showName3() {
+        var name3 = document.getElementById('characterName3').value.trim();
+        document.getElementById('displayArea3').textContent = name3;
+        var visonunser = ["Sethos", "Clorinde", "Cyon", "Keqing", "Raiden", "Yae Miko", "Beidou", "Dori", "Fischl", "Lisa", "Razor", "Kujo Sara", "Faruzan", "Kuki Shinobu"];
+        var greeting = "Not the Right Vision, keep Guessing!";
+
+        if (visonunser.includes(name3)) {
+            greeting = "Elektro Vision User";
+        }
+
+        document.getElementById('clueArea3').textContent = "Clue: " + greeting;
+    } // Added closing brace here
+
+    function showName4() {
+        var name4 = document.getElementById('characterName4').value.trim();
+        document.getElementById('displayArea4').textContent = name4;
+        var finalcharacktar =["Fischl"];
+        var greeting = "Not the Right Person!";
+
+        if (finalcharacktar.includes(name4)) {
+            greeting = "It is Fischl!!!!!";
+        }
+
+        document.getElementById('clueArea4').textContent = "Clue: " + greeting;
+    }
+</script>
+
+
+</body>
+</html>
